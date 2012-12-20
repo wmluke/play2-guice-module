@@ -85,3 +85,7 @@ Play 2.1-RC1 has a few bugs with `publish-local`, which make it difficult to use
 * https://play.lighthouseapp.com/projects/82401/tickets/710-publish-local-is-broken
 
 As an ugly work around, you can run `play package` and throw the project jar into your lib folder.
+
+## Licence
+
+play2-guice-module is distributed under the [Apache 2 licence](http://www.apache.org/licenses/LICENSE-2.0.html).
