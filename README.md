@@ -15,7 +15,7 @@ Play 2.1-RC1 provides hooks to create a "dynamic" controller class with each req
 GET     /                           @controllers.Application.index()
 ```
 
-Create `Global` which extends `GuiceGlobalSettings` as illustrated below...
+Create a `Global` object which extends `GuiceGlobalSettings` as illustrated below...
 
 ```java
 public class Global extends GuiceGlobalSettings {
@@ -25,6 +25,7 @@ public class Global extends GuiceGlobalSettings {
 
             @Override
             protected void configurePlay() {
+                // bind some stuff!
                 bind(FooPresenter.class).in(RequestScoped.class);
             }
         });
@@ -37,13 +38,16 @@ Finally, just annotate your controller method with `@With(RequestScopedAction.cl
 ```java
 public class Application extends Controller {
 
+    // ahhh immutable...
     private final FooPresenter _fooPresenter;
 
+    // yeah, constructor injector!
     @Inject
     Application(FooPresenter fooPresenter) {
         _fooPresenter = fooPresenter;
     }
 
+    // Enable RequestScoped resources for this action
     @With(RequestScopedAction.class)
     public Result index() {
         String bar = _fooPresenter.getBar();
@@ -68,7 +72,7 @@ public class FooPresenter {
 }
 ```
 
-See the sample-app for more details.
+See the [sample-app](https://github.com/wmluke/play2-guice-module/tree/master/sample-app) for more details.
 
 ## Roadmap
 
