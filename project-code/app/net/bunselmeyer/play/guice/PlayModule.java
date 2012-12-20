@@ -39,6 +39,7 @@ public class PlayModule extends AbstractModule {
         configurePlay();
     }
 
+    // Override me
     protected void configurePlay() {
     }
 }
