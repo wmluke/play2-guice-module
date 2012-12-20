@@ -4,8 +4,8 @@ import play.Project._
 
 object ApplicationBuild extends Build {
 
-  val appName         = "play2-guice"
-  val appVersion      = "1.0-SNAPSHOT"
+  val appName         = "play2-guice-module"
+  val appVersion      = "0.1-SNAPSHOT"
 
   val appDependencies = Seq(
     javaCore,

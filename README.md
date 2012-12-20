@@ -1,6 +1,6 @@
-# play2-guice
+# play2-guice-module
 
-Inspired by Guice's excellent [ServletModule](http://code.google.com/p/google-guice/wiki/ServletModule) integration, `play2-guice` takes advantage of some of the new Play 2.1 RC1 features to provide several utility classes to integrate Google Guice into Play.
+Inspired by Guice's excellent [ServletModule](http://code.google.com/p/google-guice/wiki/ServletModule) integration, `play2-guice-module` takes advantage of some of the new Play 2.1 RC1 features to provide several utility classes to integrate Google Guice into Play.
 
 ## Requirements
 * Play 2.1-RC1

@@ -16,7 +16,7 @@ object ApplicationBuild extends Build {
     "com.google.inject.extensions" % "guice-servlet" % "3.0",
     "com.google.inject.extensions" % "guice-multibindings" % "3.0",
     "com.google.guava" % "guava" % "13.0"
-//    "play2-guice" % "play2-guice_2.10" % "1.0-SNAPSHOT"
+//    "play2-guice-module" % "play2-guice-module_2.10" % "0.1-SNAPSHOT"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
