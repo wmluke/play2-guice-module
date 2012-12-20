@@ -37,20 +37,18 @@ Finally, just annotate your controller method with `@With(RequestScopedAction.cl
 ```java
 public class Application extends Controller {
 
-    private final RequestScopedService _service;
+    private final FooPresenter _fooPresenter;
 
-    // Yeah constructor injection for easy unit tests!!!
     @Inject
-    Application(RequestScopedService service) {
-        _service = service;
+    Application(FooPresenter fooPresenter) {
+        _fooPresenter = fooPresenter;
     }
 
-    // Use action composition
     @With(RequestScopedAction.class)
     public Result index() {
-        return ok(index.render(_service.doSomething()));
+        String bar = _fooPresenter.getBar();
+        return ok(index.render("Request: " + bar));
     }
-
 }
 ```
 
