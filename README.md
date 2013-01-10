@@ -86,7 +86,11 @@ Play 2.1-RC1 has a few bugs with `publish-local`, which make it difficult to use
 * https://play.lighthouseapp.com/projects/82401/tickets/898-javadoc-error-invalid-flag-g-when-publishing-new-module-local
 * https://play.lighthouseapp.com/projects/82401/tickets/710-publish-local-is-broken
 
-As an ugly work around, you can run `play package` and throw the project jar into your lib folder.
+As a work around, I disabled publishing the main API jar...
+
+```scala
+publishArtifact in(Compile, packageDoc) := false
+```
 
 ## Licence
 

@@ -21,6 +21,12 @@ object ApplicationBuild extends Build {
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
+    organization := "net.bunselmeyer",
+
+    // disable publishing the main API jar to work around
+    //   https://play.lighthouseapp.com/projects/82401/tickets/898-javadoc-error-invalid-flag-g-when-publishing-new-module-local
+    //   https://play.lighthouseapp.com/projects/82401/tickets/710-publish-local-is-broken
+    publishArtifact in(Compile, packageDoc) := false
   )
 
 }
