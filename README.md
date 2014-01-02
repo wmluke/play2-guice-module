@@ -1,5 +1,7 @@
 # play2-guice-module
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wmluke/play2-guice-module/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 Inspired by Guice's excellent [ServletModule](http://code.google.com/p/google-guice/wiki/ServletModule) integration, `play2-guice-module` takes advantage of some of the new Play 2.1 RC1 features to provide several utility classes to integrate Google Guice into Play.
 
 ## Requirements
